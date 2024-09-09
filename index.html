@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>92e9e75be73e4930ad93dcf5ca51f948</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<p>{ “nbformat”: 4, “nbformat_minor”: 0, “metadata”: { “colab”: {
+“provenance”: [] }, “kernelspec”: { “name”: “python3”, “display_name”:
+“Python 3” }, “language_info”: { “name”: “python” } }, “cells”: [ {
+“cell_type”: “markdown”, “source”: [ “# crawling berita di kompas”, “”,
+“##apa itu crawling?”, “”, “crawling merupakan program otomastis untuk
+mengumpulkan informasi dari berbagai halaman web. program crawling yang
+bisa di sebut juga "web spider" yang secara sistematis mengunjungi
+halaman-halaman web dan mengumpulkan data seperti teks, gambar dan
+metadata.”, “”, “proses crawling ini biasanya digunakan oleh mesin
+search engine untuk mengindeks konten web, sehingga ketika orang
+melakukan pencarian, mesin pencari dapat dengan cepat memberikan konten
+yang relevan.” ], “metadata”: { “id”: “sxX55pozBQJy” } }, { “cell_type”:
+“markdown”, “source”: [ “#proses melakukan crawling”, “##tool atau
+library” ], “metadata”: { “id”: “47tIjVVJEGO9” } }, { “cell_type”:
+“code”, “execution_count”: null, “metadata”: { “id”: “0e5Dn0R4BHtI” },
+“outputs”: [], “source”: [ “from bs4 import BeautifulSoup as bs”,
+“import requests”, “import pandas as pd”, “import time” ] }, {
+“cell_type”: “markdown”, “source”: [ “- BeautifulSoup berfungsi untuk
+parsing HTML dan ekstraksi data”, “- request berfungsi untuk mengirim
+permintaan HTTP”, “- pandas berfungsi untuk membaca dan menganalisis
+data yang disimpan”, “- time berfungsi untuk memberikan delay agar
+server tidak overload” ], “metadata”: { “id”: “RrWSeR7HFKX2” } }, {
+“cell_type”: “markdown”, “source”: [ “#code program”, “” ], “metadata”:
+{ “id”: “xZYMkLe7INrs” } }, { “cell_type”: “code”, “source”: [ “def
+replace_text(txt):”, ” txt = txt.replace(‘Baca berita tanpa iklan.’,
+’‘)“,” txt = txt.replace(’\xa0’, ’‘)“,” txt = txt.replace(’\n’, ’’)“,”
+return txt” ], “metadata”: { “id”: “rxJjAezmKfzR” }, “execution_count”:
+null, “outputs”: [] }, { “cell_type”: “markdown”, “source”: [ “fungsi
+ini berfungsi untuk menghapus text yang tidak dibutuhkan” ], “metadata”:
+{ “id”: “ekPpr1EDNI1d” } }, { “cell_type”: “code”, “source”: [ “def
+scraping(soup):”, ” isi_berita = {}“,”“,” title = soup.find(‘h1’,
+{‘class’: ’read__title’})“,” isi_berita["judul"] = title.text.strip() if
+title else "Title not found"“,”“,” rplc = []“,” berita =
+soup.find(‘div’, {‘class’: ’read__content’})“,” if berita:“,” for
+paragraph in berita.find_all(‘p’):“,”
+rplc.append(replace_text(paragraph.text))“,” isi_berita["isi"] = "
+".join(rplc)“,” else:“,” isi_berita["isi"] = "Content not found"“,”“,”
+date = soup.find(‘div’, {‘class’: ’read__time’})“,”
+isi_berita["tanggal"] = date.text.strip() if date else "Date not
+found"“,”“,” category = soup.select_one(‘body &gt; div.wrap &gt;
+div.container.clearfix &gt; div:nth-child(3) &gt; div &gt; h3 &gt; ul
+&gt; li:nth-child(3) &gt; a &gt; span’)“,” isi_berita["kategori"] =
+category.text.strip() if category else "Category not found"“,” return
+isi_berita” ], “metadata”: { “id”: “lgRsWHBKPPOR” }, “execution_count”:
+null, “outputs”: [] }, { “cell_type”: “markdown”, “source”: [ “fungsi
+ini untuk proses scraping data dengan mengambil judul, pembersihan isi,
+tanggal berita, dan kategori berita” ], “metadata”: { “id”:
+“2B_036D2XA_q” } }, { “cell_type”: “code”, “source”: [ “def
+linked_news(url):”, ” try:“,” response = requests.get(url)“,”
+response.raise_for_status()“,” return bs(response.text, "html5lib")“,”
+except requests.exceptions.RequestException as e:“,” print(f"Request
+failed: {e}")“,” return None” ], “metadata”: { “id”: “8_ZiRbtfIW7w” },
+“execution_count”: null, “outputs”: [] }, { “cell_type”: “markdown”,
+“source”: [ “fungsi linked_news ini untuk mengambil isi html dalam web
+yang membutuhkan library request dan BeautifulSoup” ], “metadata”: {
+“id”: “DqrUJeLoKSx_” } }, { “cell_type”: “code”, “source”: [ “def
+link_berita(soup):”, ” if soup:“,” konten = soup.find(‘div’, {‘class’:
+‘articleList -list’})“,” if konten:“,” articles = konten.find_all("div",
+class_="articleItem")“,” print(f"Found {len(articles)} articles on this
+page.") # Debugging print“,” return articles“,” print("No articles
+found.") # Debugging print“,” return []” ], “metadata”: { “id”:
+“ZmUysV2LZkI2” }, “execution_count”: null, “outputs”: [] }, {
+“cell_type”: “markdown”, “source”: [ “fungsi link_berita untuk mengambil
+semua berita yang berada di halaman hompage web” ], “metadata”: { “id”:
+“lrVx_FREeNHa” } }, { “cell_type”: “code”, “source”: [ “def
+start(page=1):”, ” base_url =
+‘https://indeks.kompas.com/?site=news&amp;page=’“,” news = []“,”“,” for
+current_page in range(1, page + 1):“,” url = base_url +
+str(current_page)“,” print(f"Fetching page: {url}") # Debugging print“,”
+soup = linked_news(url)“,” if soup:“,” articles = link_berita(soup)“,”
+for article in articles:“,” new_link = article.find(‘a’)[‘href’]“,”
+soup_berita = linked_news(new_link)“,” if soup_berita:“,” hasil =
+scraping(soup_berita)“,” news.append(hasil)“,” time.sleep(1)“,” return
+news” ], “metadata”: { “id”: “Jx7EDNXqeXHh” }, “execution_count”: null,
+“outputs”: [] }, { “cell_type”: “markdown”, “source”: [ “fungsi start
+ini untuk perulangan mengambil url berita pada halaman homepage, dan
+juga menggunakan funtion yang telah dibuat sebelumnya.”, “”, “kemudian
+ada program untuk memasukkan berapa halaman yang ingin di scraping” ],
+“metadata”: { “id”: “UKoaSV5Oj6Ft” } }, { “cell_type”: “code”, “source”:
+[ “ppageage = int(input(‘Masukkan jumlah halaman:’))”, “berita =
+start(page)”, “”, “if berita:”, ” # Create a DataFrame and display it“,”
+dataFrame = pd.DataFrame(berita)“,” print(dataFrame)“,”“,” # Save
+DataFrame to a CSV file“,” csv_filename = ‘berita_kompas.csv’“,”
+dataFrame.to_csv(csv_filename, index=False, encoding=‘utf-8-sig’)“,”
+print(f"Data has been saved to {csv_filename}")“,”else:“,” print("No
+news data was collected.")” ], “metadata”: { “colab”: { “base_uri”:
+“https://localhost:8080/” }, “id”: “DGyPd3AfKudX”, “outputId”:
+“2506787a-eefd-4557-f4cf-ced512b14ffb” }, “execution_count”: 9,
+“outputs”: [ { “output_type”: “stream”, “name”: “stdout”, “text”: [
+“Masukkan jumlah halaman: 2”, “Fetching page:
+https://indeks.kompas.com/?site=news&amp;page=1”, “Found 15 articles on
+this page.”, “Fetching page:
+https://indeks.kompas.com/?site=news&amp;page=2”, “Found 15 articles on
+this page.”, ” judul \“,”0 Bocah di Serpong Diculik Pria Berjaket Ojol
+Ke… “,”1 Pesawat Trigana Air Tergelincir di Papua, Semu… “,”2 Rano Karno
+Optimistis Bisa Tuntaskan Polemik K… “,”3 KPU Terima Permintaan
+Penggantian Caleg Terpil… “,”4 KPU Susun Aturan soal Dana Kampanye
+Pilkada “,”5 Heru Budi Bakal Uji Coba Makan Bergizi Gratis … “,”6
+Resmikan Venue PON XXI di Aceh, Jokowi: Jangan… “,”7 Minta Demokrat
+Dukung Pemerintahan Prabowo, SB… “,”8 Pesawat Trigana Air yang
+Tergelincir Ditumpang… “,”9 Muncul Gerakan Coblos 3 Paslon Pilkada
+Jakarta… “,”10 Minta Dukung Masa Transisi Jokowi ke Prabowo, … “,”11
+Pertama Kalinya, Heru Budi Uji Coba Program Ma… “,”12 Di HUT Ke-23
+Demokrat, SBY Minta Konstitusi da… “,”13 ADHI Bersama Presiden Resmikan
+RS Terbesar di … “,”14 Lektor Tunanetra Dustin: Tuhan Membuat Saya Se…
+“,”15 MA Tolak PK Kedua Djoko Susilo “,”16 Serap Aspirasi, Rano Karno
+Gelar Pertemuan den… “,”17 Sandi Butar Butar Laporkan Dinas Damkar Depok
+… “,”18 Indonesia Perlu Wacanakan Kotak Kosong Tak Han… “,”19 Jadi
+Lektor Saat Misa Kudus Paus Fransiskus di… “,”20 Hasil Otopsi Jasad
+Pasutri Lansia di Cipondoh:… “,”21 KPU Akan Rapat dengan DPR Selasa
+Besok, Bahas … “,”22 "Kampanye" Dini Pramono Anung dan Ridwan Kamil…
+“,”23 Deretan Purnawirawan Jenderal di Belakang Ahma… “,”24 Wapres Akan
+Resmikan Pasar di Bangka Belitung “,”25 Jokowi Resmikan Tol Sigli-Banda
+Aceh Senilai R… “,”26 Pasutri Lansia Tewas di Cipondoh, Polisi Sebut…
+“,”27 Pria Ditemukan Tewas di Dalam Mobil yang Terpa… “,”28 Lektor
+Tunanetra Dustin: Tidak Pernah Bermimpi… “,”29 Mengenal SMA Taruna
+Nusantara yang Alumnusnya … “,”“,” isi \“,”0 JAKARTA, KOMPAS.com - Bocah
+laki-laki berinisi… “,”1 JAKARTA, KOMPAS.com - Seluruh penumpang dan kr…
+“,”2 JAKARTA, KOMPAS.com - Bakal calon wakil gubern… “,”3 JAKARTA,
+KOMPAS.com - Komisi Pemilihan Umum (K… “,”4 JAKARTA, KOMPAS.com - Komisi
+Pemilihan Umum (K… “,”5 JAKARTA, KOMPAS.com - Penjabat (Pj) Gubernur J…
+“,”6 JAKARTA, KOMPAS.com - Presiden Joko Widodo mer… “,”7 JAKARTA,
+KOMPAS.com - Ketua Majelis Tinggi Par… “,”8 JAKARTA, KOMPAS.com - Istri
+Pj Gubernur Papua… “,”9 JAKARTA, KOMPAS.com - Bakal calon wakil gubern…
+“,”10 JAKARTA, KOMPAS.com - Ketua Majelis Tinggi Par… “,”11 JAKARTA,
+KOMPAS.com - Penjabat (Pj) Gubernur J… “,”12 JAKARTA, KOMPAS.com - Ketua
+Majelis Tinggi Par… “,”13 KOMPAS.com - PT Adhi Karya (Persero) Tbk (ADH…
+“,”14 JAKARTA, KOMPAS.com - Penyandang tunanetra yan… “,”15 JAKARTA,
+KOMPAS.com - Mahkamah Agung (MA) meno… “,”16 JAKARTA, KOMPAS.com - Bakal
+calon wakil gubern… “,”17 DEPOK, KOMPAS.com - Sandi Butar Butar,
+petugas… “,”18 JAKARTA, KOMPAS.com - Indonesia dinilai perlu… “,”19
+JAKARTA, KOMPAS.com - Bernadus Dustin (22), p… “,”20 TANGERANG,
+KOMPAS.com - Kasat Reskrim Polres … “,”21 JAKARTA, KOMPAS.com - Komisi
+Pemilihan Umum (K… “,”22 JAKARTA, KOMPAS.com - Dua bakal pasangan calon…
+“,”23 JAKARTA, KOMPAS.com - Sejumlah jenderal purnaw… “,”24 JAKARTA,
+KOMPAS.com - Wakil Presiden (Wapres) … “,”25 JAKARTA, KOMPAS.com -
+Presiden Joko Widodo mer… “,”26 TANGERANG, KOMPAS.com - BK (70) dan RB
+(65), p… “,”27 JAKARTA, KOMPAS.com - Pria bernama Sukirno (42… “,”28
+JAKARTA, KOMPAS.com - Penyandang tunanetra Be… “,”29 JAKARTA, KOMPAS.com
+- SMA Taruna Nusantara, se… “,”“,” tanggal kategori “,”0 Kompas.com -
+09/09/2024, 13:16 WIB Megapolitan “,”1 Kompas.com - 09/09/2024, 13:16
+WIB Nasional “,”2 Kompas.com - 09/09/2024, 13:15 WIB Megapolitan “,”3
+Kompas.com - 09/09/2024, 13:11 WIB Nasional “,”4 Kompas.com -
+09/09/2024, 13:10 WIB Nasional “,”5 Kompas.com - 09/09/2024, 13:03 WIB
+Megapolitan “,”6 Kompas.com - 09/09/2024, 13:02 WIB Nasional “,”7
+Kompas.com - 09/09/2024, 13:02 WIB Nasional “,”8 Kompas.com -
+09/09/2024, 12:55 WIB Nasional “,”9 Kompas.com - 09/09/2024, 12:53 WIB
+Megapolitan “,”10 Kompas.com - 09/09/2024, 12:51 WIB Nasional “,”11
+Kompas.com - 09/09/2024, 12:45 WIB Megapolitan “,”12 Kompas.com -
+09/09/2024, 12:44 WIB Nasional “,”13 Kompas.com - 09/09/2024, 12:39 WIB
+Nasional “,”14 Kompas.com - 09/09/2024, 12:38 WIB Megapolitan “,”15
+Kompas.com - 09/09/2024, 12:34 WIB Nasional “,”16 Kompas.com -
+09/09/2024, 12:33 WIB Megapolitan “,”17 Kompas.com - 09/09/2024, 12:23
+WIB Megapolitan “,”18 Kompas.com - 09/09/2024, 12:20 WIB Nasional “,”19
+Kompas.com - 09/09/2024, 12:12 WIB Megapolitan “,”20 Kompas.com -
+09/09/2024, 12:07 WIB Megapolitan “,”21 Kompas.com - 09/09/2024, 12:06
+WIB Nasional “,”22 Kompas.com - 09/09/2024, 11:55 WIB Megapolitan “,”23
+Kompas.com - 09/09/2024, 11:53 WIB Nasional “,”24 Kompas.com -
+09/09/2024, 11:48 WIB Nasional “,”25 Kompas.com - 09/09/2024, 11:45 WIB
+Nasional “,”26 Kompas.com - 09/09/2024, 11:32 WIB Megapolitan “,”27
+Kompas.com - 09/09/2024, 11:31 WIB Megapolitan “,”28 Kompas.com -
+09/09/2024, 11:29 WIB Megapolitan “,”29 Kompas.com - 09/09/2024, 11:28
+WIB Nasional “,”Data has been saved to berita_kompas.csv” ] } ] }, {
+“cell_type”: “markdown”, “source”: [ “ini fungsi untuk memasukkannya ke
+dalam data frame” ], “metadata”: { “id”: “P8UKx39pkKHd” } } ] }</p>
+</body>
+</html>
